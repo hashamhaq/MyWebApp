@@ -16,7 +16,7 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: '8.x.x' # Replace '8.x.x' with the version you have installed
+    version: '8.0.302' # Replace '8.x.x' with the version you have installed
 
 - script: |
     dotnet build --configuration $(buildConfiguration)
