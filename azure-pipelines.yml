@@ -4,33 +4,26 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+  - main  # Trigger the pipeline on commits to the 'main' branch
 
 pool:
-  vmImage: 'windows-latest'
-
-variables:
-  buildConfiguration: 'Release'
+  vmImage: 'windows-latest'  # Use a Windows agent
 
 steps:
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '8.0.302' # Replace '8.x.x' with the version you have installed
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '8.x'  # Replace with your .NET SDK version
 
-- script: |
-    dotnet build --configuration $(buildConfiguration)
-  displayName: 'Build project'
+  - script: |
+      dotnet restore
+    displayName: 'dotnet restore'
 
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)/MyWebApp'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/MyWebApp.zip'
-    replaceExistingArchive: true
+  - script: |
+      dotnet build --configuration Release
+    displayName: 'dotnet build'
 
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/MyWebApp.zip'
-    ArtifactName: 'drop'
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '$(Build.SourcesDirectory)'
+      artifactName: 'webapp'

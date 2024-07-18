@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dot Net Projects\\MydotNetApp\\MyWebApp\\MyWebApp.csproj",
+      "projectUniqueName": "C:\\Dot Net Projects\\MyDotNetApp\\MyWebApp\\MyWebApp.csproj",
       "projectName": "MyWebApp",
-      "projectPath": "C:\\Dot Net Projects\\MydotNetApp\\MyWebApp\\MyWebApp.csproj",
+      "projectPath": "C:\\Dot Net Projects\\MyDotNetApp\\MyWebApp\\MyWebApp.csproj",
       "packagesPath": "C:\\Users\\ZA Group\\.nuget\\packages\\",
-      "outputPath": "C:\\Dot Net Projects\\MydotNetApp\\MyWebApp\\obj\\",
+      "outputPath": "C:\\Dot Net Projects\\MyDotNetApp\\MyWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ZA Group\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
